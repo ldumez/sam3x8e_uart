@@ -1,12 +1,12 @@
 #include "../include/class_reg_uart_idr.h"
 
 class_reg_uart_idr::class_reg_uart_idr() : class_reg_32(),rxrdy(0),	txrdy(0),	endrx(0),	endtx(0),	ovre(0),	frame(0),
-	pare(0), txempty(0), txbufe(0),	txbuff(0)
+	pare(0), txempty(0), txbufe(0),	rxbuff(0)
 	{
 	}
 
 void class_reg_uart_idr::write(int data){
-	this.set_reg_value(data);
+	this->set_reg_value(data);
 	rxrdy = ( data & mask_rxrdy ) >> start_rxrdy;
 	txrdy = ( data & mask_txrdy ) >> start_txrdy;
 	endrx = ( data & mask_endrx ) >> start_endrx;

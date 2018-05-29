@@ -4,7 +4,7 @@ class_reg_uart_mr::class_reg_uart_mr() : class_reg_32(), par(0), chmode(0)
 	}
 
 void class_reg_uart_mr::write(int data){
-	this.set_reg_value(data);
+	this->set_reg_value(data);
 	par = ( data & mask_par ) >> start_par;
 	chmode	= ( data & mask_chmode ) >> start_chmode;
 }

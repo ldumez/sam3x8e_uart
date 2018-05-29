@@ -17,8 +17,9 @@ class class_reg_32
     virtual void set_reg_value(int data) = 0;
 
   private:
-    int reg_value;
     int mask;
+    int reg_value;
+
 
 };
 

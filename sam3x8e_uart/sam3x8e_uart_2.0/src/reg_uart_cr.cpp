@@ -6,7 +6,7 @@ class_reg_uart_cr::class_reg_uart_cr() : class_reg_32(),rstrx(0), rsttx(1),
 }
 
 void class_reg_uart_cr::write(int data){
-  this.set_reg_value(data);
+  this->set_reg_value(data);
   rstrx  = ( data &  mask_rstrx ) >>  start_rstrx;
   rsttx  = ( data &  mask_rsttx ) >>  start_rsttx;
   rxen  = ( data &  mask_rxen ) >>  start_rxen;

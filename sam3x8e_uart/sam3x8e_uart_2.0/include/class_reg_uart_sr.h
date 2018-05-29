@@ -62,3 +62,4 @@ class class_reg_uart_sr : public class_reg_32 //Interrupt Enable Register
 			const int mask_rxbuff = 0x1000;	// 0x1000;
 			const int start_rxbuff = 12;	// 12;
 };
+#endif

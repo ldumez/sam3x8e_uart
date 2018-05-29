@@ -23,5 +23,6 @@ class class_reg_uart_mr : public class_reg_32 // Mode Register
 			// Channel Mode
 			int chmode;				// 2 bits : 14 et 15
 			const int mask_chmode = 0xC000;
-			const int start_par = 14;
+			const int start_chmode = 14;
 	};
+#endif
