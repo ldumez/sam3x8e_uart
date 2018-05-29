@@ -6,7 +6,6 @@ class_reg_uart_ier::class_reg_uart_ier() : class_reg_32(), rxrdy(0), txrdy(0),	e
 	}
 
 void class_reg_uart_ier::write(int data){
-	this->set_reg_value(data);
 	 rxrdy = ( data &  mask_rxrdy ) >>  start_rxrdy;
 	 txrdy = ( data &  mask_txrdy ) >>  start_txrdy;
 	 endrx = ( data &  mask_endrx ) >>  start_endrx;

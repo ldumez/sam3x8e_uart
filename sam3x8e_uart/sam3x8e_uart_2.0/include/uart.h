@@ -1,17 +1,17 @@
-#define SC_INCLUDE_DYNAMIC_PROCESSES
+#include <iostream>
+#include "class_reg_uart_mr.h"
+#include "class_reg_uart_sr.h"
+#include "class_reg_uart_cr.h"
+#include "class_reg_uart_idr.h"
+#include "class_reg_uart_imr.h"
+#include "class_reg_uart_ier.h"
+#include "class_reg_uart_rhr.h"
+#include "class_reg_32.h"
 
-#include "systemc"
-using namespace sc_core;
-using namespace sc_dt;
-using namespace std;
-
-#include "tlm.h"
-#include "tlm_utils/simple_initiator_socket.h"
-#include "tlm_utils/simple_target_socket.h"
-
-SC_MODULE(uart)                // declare add sc_module
+class uart                // declare add sc_module
 {
 public:
+
   uart();
   ~uart();
 
@@ -20,6 +20,7 @@ public:
   int   reset ();
 
 private:
+
   class_reg_uart_cr  	reg_uart_cr;
   class_reg_uart_mr 	reg_uart_mr;
   class_reg_uart_ier 	reg_uart_ier;

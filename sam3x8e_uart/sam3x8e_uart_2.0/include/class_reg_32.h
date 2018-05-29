@@ -13,8 +13,7 @@ class class_reg_32
 
     void reset();
 
-    virtual int get_reg_value() = 0;
-    virtual void set_reg_value(int data) = 0;
+    void set_reg_value(int data);
 
   private:
     int mask;
